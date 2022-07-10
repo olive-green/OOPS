@@ -62,10 +62,10 @@ class Main{
     public static void main(String[] args){
         P obj=new C();    
         
-        System.out.println(obj.d); //1
+        System.out.println(obj.d); //1 //here it gets value from P class not C because c's d cannot override P's d because Variable overriding is not possible in java
         System.out.println(obj.d1);//10
         System.out.println(obj.d2);//error
-        obj.fun();//Pfun
+        obj.fun();//Cfun //imp here we had override the function of P because method overriding is possible in java
         obj.fun1();//Pfun1
         obj.fun2();//error
         
@@ -91,6 +91,10 @@ class Main{
                       ^
         1 error
     }
+    
+    //here in above both cases we can take a example that 
+    // C has more properties available so C is big, so we can take less properties from C like in 3rd case but we cannot take more properties from less properties class ie. P in case 4
+    
     
     
 }
